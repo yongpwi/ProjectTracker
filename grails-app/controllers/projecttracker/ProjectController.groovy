@@ -1,13 +1,14 @@
 package projecttracker
 
-class ListProjectsController {
+class ProjectController {
+    def scaffold = true
 
-    def index = {
-        redirect (action: current)
-    }
+//    def index = {
+//        redirect (action: current)
+//    }
 
     def current = {
-        def allProjects = ListProjects.list()
+        def allProjects = Project.list()
         [allProjects:allProjects]
     }
 
